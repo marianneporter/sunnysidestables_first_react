@@ -1,0 +1,47 @@
+@import "./App.scss";
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $primary;
+  //  background-color: red;
+    color: white;   
+    min-height: $navbarHeight;
+    min-width: 100%; 
+
+    .siteName {
+        font-size: 20px;
+        padding: 16px;
+        margin-right: 16px;
+    }
+
+    .navbarToggle {            
+        display:none;         
+    }   
+
+    .navItems {                
+        list-style: none;     
+        display: flex;    
+        column-gap: 30px;
+        align-items:center;        
+
+        .navItem{                 
+            display: block;
+          
+            padding: 16px 24px;                       
+
+            &:hover:not(:last-child) {
+                background-color: $primaryHighlight;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+              
+            }
+       }            
+    }
+
+
+}
