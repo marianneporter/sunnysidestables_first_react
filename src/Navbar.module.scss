@@ -4,8 +4,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: $primary;
-  //  background-color: red;
+    background-color: $primary; 
     color: white;   
     min-height: $navbarHeight;
     min-width: 100%; 
@@ -13,35 +12,86 @@
     .siteName {
         font-size: 20px;
         padding: 16px;
-        margin-right: 16px;
+        margin-right: 16px;       
     }
 
     .navbarToggle {            
-        display:none;         
+        display: none;         
     }   
 
     .navItems {                
-        list-style: none;     
+       
         display: flex;    
         column-gap: 30px;
         align-items:center;        
 
         .navItem{                 
-            display: block;
-          
-            padding: 16px 24px;                       
+            display: block;          
+            padding: 16px 24px;    
+            color: white;
+            text-decoration: none;                         
 
-            &:hover:not(:last-child) {
+            &:hover {
                 background-color: $primaryHighlight;
-            }
-
-            a {
-                color: white;
-                text-decoration: none;
-              
-            }
+            } 
        }            
     }
+}
 
+@media screen and (max-width: 299px) {
+    .navbar {
+        .siteName {
+            font-size: 18px;
+        }
+    }
+}
 
+@media screen and (max-width: 767px) {  
+    
+    .navbar {
+        display: block;
+        background-color: $primary;
+        color: white;
+        max-height: $navbarHeight;
+        min-width: 100%;       
+
+        .siteNameArea {
+            display: flex;
+            background-color: $primary;
+            width: 100vw;
+            min-height: $navbarHeight;
+            position: relative;
+            z-index: 100;
+        }
+
+        .siteName {
+            width: 90%;
+            display:flex;   
+            align-items: center;            
+        }
+
+        .navbarToggle {
+            width: 10%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navItems {
+            background-color: $primary;
+            z-index: 1;
+            transform: translateY(-250px);
+            transition: transform 2s;
+            width: 100%;
+            flex-direction: column;
+
+            .navItem {
+                text-align: center;                    
+            } 
+        }   
+        
+        .menuActive {
+            transform: translateY(0px)
+        }
+    } 
 }

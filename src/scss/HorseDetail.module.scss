@@ -1,0 +1,149 @@
+@import "../App.scss";
+
+.content {     
+    padding: 20px 10px;
+    width: 100vw;
+}
+
+.horseDetailsCard {
+     background-color: white;
+     padding: 16px 8px;
+     margin: auto;
+
+
+    .detailLines {
+
+        margin-top: 16px;
+
+        .detailLine {
+            line-height:24px;              
+        }
+        
+        .detailLineOwnerLine {
+            padding-top: 2px;
+            line-height: 20px; 
+        }
+
+        .detailTitle, .detailValue {
+           display: inline-block;
+        }
+
+        .detailTitle {
+            width: 80px;
+        }
+
+        .detailValue {
+            width: calc(95% - 80px);
+            vertical-align: top;
+        }  
+    } 
+    
+    .btnArea > * {
+        margin: 5px;
+    }
+}
+
+
+/*********************** extra small screens *********************/
+@media screen and (max-width: 299px) {
+    .content {
+       @include mobile-background;         
+    }
+
+    .imgArea {
+        img {
+            display: block;
+            max-width: 250px;
+            height: auto;           
+            margin: 10px auto;
+        }
+    }
+}
+
+ /*********************** small screens *********************/
+@media screen and (min-width: 300px) and (max-width: 767px),
+                  (min-width: 768px) and (max-height: 699px) {
+    .content {
+        @include mobile-background;        
+    }
+
+    .horseDetailsCard {
+        max-width: 600px;
+        padding: 16px;                        
+    }
+
+    .imgArea {
+        img {
+            display: block;
+            max-width: 300px;
+            height: auto;
+            margin: 8px auto;
+        }
+    }  
+}
+
+ /*********************** medium screens *********************/
+@media screen and (min-width: 768px) and (min-height: 700px) {
+    .content {
+        @include desktop-background($formBackgroundImage, true, 0.75);              
+        display:flex;
+        justify-content: center;
+        align-items: center; 
+        min-height: $contentHeight;       
+        position: fixed;   
+       
+    } 
+
+    .cardBody {         
+        padding: 0 32px 16px 32px;  
+    }
+
+    
+    h3 {
+         margin-left: 24px;          
+    }
+
+    .horseDetailsCard {
+        width: 600px;      
+        min-height: 550px;
+        padding: 32px;  
+    }
+
+    .DetailLines {
+        display: flex;
+        flex-wrap: wrap;
+
+        .detailLine {
+            width: 45%;
+            line-height: 32px;
+            padding-left: 20px;
+        }
+
+        .detailLine.ownerLine {
+            padding-top: 6px;
+            width: 95%;              
+            line-height:20px;        
+        }
+    }
+
+    .imgArea {           
+        img {
+            display: block;
+            margin-right: 24px;
+            margin-left: auto;
+            max-width: 375px;
+            height: auto;
+            margin-top: 20px;
+        }         
+    } 
+
+    .btnArea {         
+        border-top: 0.5px solid #BEBEBE;
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-around;     
+        .btn {
+            width: 30%;
+        }           
+    }  
+}

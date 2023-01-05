@@ -1,0 +1,23 @@
+@import "../App.scss";
+
+.title {
+    margin: 30px 60px;
+}
+
+.horseList {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .horseCards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }   
+}
+
+@media screen and (max-width: 767px) {
+    .horseCards {
+        margin-top: 30px;
+    }
+}
