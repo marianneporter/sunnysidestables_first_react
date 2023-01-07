@@ -2,6 +2,7 @@ import hd from '../scss/HorseDetail.module.scss'
 
 import { Link, useParams } from 'react-router-dom'
 
+import Nav from '../components/Nav'
 import OwnersNames from '../components/OwnersNames'
 
 import useFetch from "../hooks/useFetch"
@@ -13,8 +14,10 @@ const HorseDetail = () => {
     const { data: horse, isLoading, error } = useFetch(`http://localhost:8000/horses/${id}`)
 
     return ( 
-
+       <>
+        <Nav />
         <div className={hd.content}>
+            {/* <Nav /> */}
             { isLoading && 
                 <p>Loading...</p>
             }
@@ -29,7 +32,7 @@ const HorseDetail = () => {
 
                     <div className={hd.cardBody}>
                         <div className={hd.imgArea}>
-                            <img src={horse.imageUrl} alt=""/>
+                            <img src={horse.imageUrl} alt={`No pic of ${horse.name} available yet`}/> 
                         </div> 
 
                         <div className={hd.detailLines}>
@@ -60,8 +63,8 @@ const HorseDetail = () => {
                     </div>
                 </div>
             )}
-
         </div>
+        </> 
     );
 }
  

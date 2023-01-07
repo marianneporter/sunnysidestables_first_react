@@ -1,4 +1,4 @@
-import nb from "./Navbar.module.scss"
+import nb from "../scss/Navbar.module.scss"
 import { useState } from 'react'
 import { useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,12 +11,10 @@ const Navbar = () => {
     const navigate = useNavigate()
    
     const toggleNav = () => {    
-        setToggle(!toggle)
-        console.log(toggle)
+        setToggle(!toggle)  
     }
 
-    const navigateToRoute = (routeName) => {
-        console.log('in navigate to route')
+    const navigateToRoute = (routeName) => { 
         setToggle(false)
         navigate(routeName)
     }

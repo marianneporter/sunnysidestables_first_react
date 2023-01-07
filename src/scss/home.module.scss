@@ -1,0 +1,23 @@
+@import "../App.scss";
+
+@media screen and (max-width: 991px) {
+
+    .container {  
+        @include mobile-background;
+    }
+}
+
+@media screen and (min-width: 992px ) {
+
+    .container {
+        @include desktop-background($desktopLandingImage, false, 1);       
+        color: white;
+        padding: 25px;  
+
+        a {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+        }
+    }    
+}

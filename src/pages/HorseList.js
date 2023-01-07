@@ -1,6 +1,7 @@
 import HorseListCard from "../components/HorseListCard"
 import useFetch from "../hooks/useFetch";
 import hl from "../scss/HorseList.module.scss"
+import Nav from "../components/Nav"
 
 const HorseList = () => {
 
@@ -8,8 +9,8 @@ const HorseList = () => {
 
     return ( 
         
-        <div className="content">
-
+        <div className="container">
+            <Nav />
             <h1 className={hl.title}>
                 Horses...
             </h1>
