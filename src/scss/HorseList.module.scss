@@ -1,19 +1,30 @@
-@import "../App.scss";
+@import "app.scss";
 
 .title {
     margin: 30px 60px;
 }
 
-.horseList {
+.horseList { 
     max-width: 1200px;
     margin: 0 auto;
-
+    
     .horseCards {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 40px;
     }   
+}
+
+.error {
+    p {
+        display: inline-block;
+        margin-right: 100px;
+    }
+
+    a {
+        display: inline-block;
+    }
 }
 
 @media screen and (max-width: 767px) {

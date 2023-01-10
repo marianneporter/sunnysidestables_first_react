@@ -1,8 +1,9 @@
+@use "../app.scss";
 @mixin desktop-background($image, $hasNav, $opacity) {
     position: relative;       
    
     @if ($hasNav) {
-        height: $contentHeight;         
+        height: app.$contentHeight;         
     } @else {
        height: 100vh;             
     }
@@ -21,7 +22,7 @@
         background-size: cover;  
 
         @if ($hasNav) {
-            height: $contentHeight;      
+            height: app.$contentHeight;      
             
         } @else {
            height: 100vh;           

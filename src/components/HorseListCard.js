@@ -13,7 +13,10 @@ const HorseListCard = ( { horse } ) => {
                 <img src={horse.imageUrl} alt="No pic uploaded"/>
             </div>
             <div className={hlc.btnArea}>
-                <Link to={`/horseDetail/${horse.id}`} className="btn btn-primary">Details</Link>
+                <Link to={`/horseDetail/${horse.id}`}
+                      className={`${hlc.btn} ${hlc.btnPrimary}`}>
+                    Details
+                </Link>
             </div>
         </div>
     );

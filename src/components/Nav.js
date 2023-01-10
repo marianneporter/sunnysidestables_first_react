@@ -36,13 +36,8 @@ const Navbar = () => {
                 <li onClick={() => navigateToRoute('/horseList')} className={nb.navItem}>Horse List</li>      
                 <li onClick={() => navigateToRoute('/about')} className={nb.navItem}>About</li>  
             </ul >
-
-        </nav>
-        
+        </nav>        
      );
-
-
-
 }
  
 export default Navbar;

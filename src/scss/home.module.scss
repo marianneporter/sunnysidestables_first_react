@@ -1,16 +1,18 @@
-@import "../App.scss";
+@use "mixins/backgrounds.scss";
+@use "./app.scss";
+
 
 @media screen and (max-width: 991px) {
 
     .container {  
-        @include mobile-background;
+        @include backgrounds.mobile-background;
     }
 }
 
 @media screen and (min-width: 992px ) {
 
     .container {
-        @include desktop-background($desktopLandingImage, false, 1);       
+        @include backgrounds.desktop-background(app.$desktopLandingImage, false, 1);       
         color: white;
         padding: 25px;  
 

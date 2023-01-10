@@ -1,12 +1,13 @@
-@import "../App.scss";
+@use "app.scss";
+
 
 .navbar {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: $primary; 
+    background-color: app.$primary; 
     color: white;   
-    min-height: $navbarHeight;
+    min-height: app.$navbarHeight;
     min-width: 100%; 
 
     .siteName {
@@ -32,7 +33,7 @@
             text-decoration: none;                         
 
             &:hover {
-                background-color: $primaryHighlight;
+                background-color: app.$primaryHighlight;
             } 
        }            
     }
@@ -50,16 +51,16 @@
     
     .navbar {
         display: block;
-        background-color: $primary;
+        background-color: app.$primary;
         color: white;
-        max-height: $navbarHeight;
+        max-height: app.$navbarHeight;
         min-width: 100%;       
 
         .siteNameArea {
             display: flex;
-            background-color: $primary;
+            background-color: app.$primary;
             width: 100vw;
-            min-height: $navbarHeight;
+            min-height: app.$navbarHeight;
             position: relative;
             z-index: 100;
         }
@@ -78,7 +79,7 @@
         }
 
         .navItems {
-            background-color: $primary;
+            background-color: app.$primary;
             z-index: 1;
             transform: translateY(-250px);
             transition: transform 2s;

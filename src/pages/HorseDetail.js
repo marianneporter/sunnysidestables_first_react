@@ -1,6 +1,7 @@
 import hd from '../scss/HorseDetail.module.scss'
 
 import { Link, useParams } from 'react-router-dom'
+import { format } from 'date-fns'
 
 import Nav from '../components/Nav'
 import OwnersNames from '../components/OwnersNames'
@@ -17,7 +18,7 @@ const HorseDetail = () => {
        <>
         <Nav />
         <div className={hd.content}>
-            {/* <Nav /> */}
+
             { isLoading && 
                 <p>Loading...</p>
             }
@@ -50,7 +51,7 @@ const HorseDetail = () => {
                             </div>  
                             <div className={hd.detailLine}>
                                 <div className={hd.detailTitle}>DOB:</div>
-                                <div className={hd.detailValue}>{horse.DOB}</div>
+                                <div className={hd.detailValue}>{format(new Date(horse.dob), 'd MMM yyyy')}</div>
                             </div>    
                             <div className={ hd.detailLine + hd.ownerLine }>
                                 <div className={hd.detailTitle}>Owned by:</div>
@@ -59,12 +60,13 @@ const HorseDetail = () => {
                         </div>
                     </div>
                     <div className={hd.btnArea}>
-                        <Link to="/horseList" className="btn btn-primary">Back</Link>
+                        <Link to="/horseList" className={`${hd.btn} ${hd.btnPrimary}`}>Back</Link>
                     </div>
                 </div>
             )}
         </div>
         </> 
+
     );
 }
  
