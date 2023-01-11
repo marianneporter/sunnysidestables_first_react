@@ -1,5 +1,5 @@
 import Nav from '../components/Nav'
-import am from '../scss/about.module.scss'
+import am from '../scss/pages/about.module.scss'
 
 const About = () => {
     return ( 

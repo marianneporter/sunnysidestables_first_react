@@ -1,4 +1,4 @@
-import hm from "../scss/home.module.scss"
+import hm from "../scss/pages/home.module.scss"
 import { Link } from 'react-router-dom'
 
 const Home = () => {

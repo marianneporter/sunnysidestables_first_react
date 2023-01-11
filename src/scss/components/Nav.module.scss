@@ -1,11 +1,12 @@
-@use "app.scss";
+@use "../app.scss";
+@use "../common/colors.scss";
 
 
 .navbar {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: app.$primary; 
+    background-color: colors.$primary; 
     color: white;   
     min-height: app.$navbarHeight;
     min-width: 100%; 
@@ -33,7 +34,7 @@
             text-decoration: none;                         
 
             &:hover {
-                background-color: app.$primaryHighlight;
+                background-color: colors.$primaryHighlight;
             } 
        }            
     }
@@ -51,14 +52,14 @@
     
     .navbar {
         display: block;
-        background-color: app.$primary;
+        background-color: colors.$primary;
         color: white;
         max-height: app.$navbarHeight;
         min-width: 100%;       
 
         .siteNameArea {
             display: flex;
-            background-color: app.$primary;
+            background-color: colors.$primary;
             width: 100vw;
             min-height: app.$navbarHeight;
             position: relative;
@@ -79,7 +80,7 @@
         }
 
         .navItems {
-            background-color: app.$primary;
+            background-color: colors.$primary;
             z-index: 1;
             transform: translateY(-250px);
             transition: transform 2s;

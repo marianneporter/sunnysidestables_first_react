@@ -1,5 +1,6 @@
-@use "mixins/backgrounds.scss";
-@use "./app.scss";
+@use "../mixins/backgrounds.scss";
+@use "../app.scss";
+@use "../common/buttons.scss";
 
 
 @media screen and (max-width: 991px) {

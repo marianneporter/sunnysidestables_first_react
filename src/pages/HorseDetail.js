@@ -1,8 +1,7 @@
-import hd from '../scss/HorseDetail.module.scss'
+import hd from '../scss/pages/HorseDetail.module.scss'
 
 import { Link, useParams } from 'react-router-dom'
 import { format } from 'date-fns'
-
 import Nav from '../components/Nav'
 import OwnersNames from '../components/OwnersNames'
 

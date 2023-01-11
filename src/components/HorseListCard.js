@@ -1,4 +1,4 @@
-import hlc from "../scss/HorseListCard.module.scss"
+import hlc from "../scss/components/HorseListCard.module.scss"
 
 import { Link } from "react-router-dom"
 import OwnersNames from "./OwnersNames";

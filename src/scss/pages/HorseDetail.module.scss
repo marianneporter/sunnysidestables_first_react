@@ -1,5 +1,6 @@
-@use 'app.scss';
-@use 'mixins/backgrounds.scss';
+@use '../app.scss';
+@use '../common/buttons.scss';
+@use '../mixins/backgrounds.scss';
 
 .content {     
     padding: 20px 10px;
