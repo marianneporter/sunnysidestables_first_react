@@ -1,7 +1,7 @@
 import HorseListCard from "../components/HorseListCard"
 import { Link } from "react-router-dom"
 import useFetch from "../hooks/useFetch";
-import hl from "../scss/pages/HorseList.module.scss"
+import hl from "../scss/pages/horseList.module.scss"
 import Nav from "../components/Nav"
 
 

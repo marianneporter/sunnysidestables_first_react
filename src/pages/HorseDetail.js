@@ -1,4 +1,4 @@
-import hd from '../scss/pages/HorseDetail.module.scss'
+import hd from '../scss/pages/horseDetail.module.scss'
 
 import { Link, useParams } from 'react-router-dom'
 import { format } from 'date-fns'

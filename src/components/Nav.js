@@ -1,4 +1,4 @@
-import nb from "../scss/components/Nav.module.scss"
+import nb from "../scss/components/nav.module.scss"
 import { useState } from 'react'
 import { useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
